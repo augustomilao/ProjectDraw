@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sorteio de Projeto</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <div style="text-align: center;">
+                <h1>Sorteio de Projeto</h1>
+        </div>
+        <section id="desktop">
+                <div class="painel">
+                        <div class="opcao">
+                                <p class="titulo">Tema</p>
+                                <img src="imgs/theme.png" alt="tema_imagem">
+                                <p id="sorteio">O sorteado foi:</p>
+                                <span id="tema"></span>
+                        </div>
+
+                        <div class="opcao">
+                                <p class="titulo">Estilo</p>
+                                <img src="imgs/style.png" alt="estilo_imagem">
+                                <p id="sorteio">O sorteado foi:</p>
+                                <span id="estilo"></span>
+                        </div>
+
+                        <div class="opcao">
+                                <p class="titulo">Plataforma</p>
+                                <img src="imgs/platform.png" alt="plataforma_imagem">
+                                <p id="sorteio">O sorteado foi:</p>
+                                <span id="plataforma"></span>
+                        </div>
+
+                </div>
+        </section>
+
+        <script>
+                var Temas = [
+                        'Avião',
+                        'Aliens',
+                        'Historia Alternativa',
+                        'Negócios',
+                        'Cidades',
+                        'Comédia',
+                        'Cyberpunk',
+                        'Dança',
+                        'Detetive',
+                        'Dungeon',
+                        'Evolução',
+                        'Fantasia',
+                        'Fashion',
+                        'Game Dev',
+                        'Governo',
+                        'Hacking',
+                        'História',
+                        'Horror',
+                        'Caça',
+                        'Hospital',
+                        'Lei',
+                        'Vida',
+                        'Artes Marciais',
+                        'Medieval',
+                        'Militar',
+                        'Filmes',
+                        'Musica',
+                        'Mistério',
+                        'Ninja',
+                        'Pirata',
+                        'Pós Apocalipse',
+                        'Prisão',
+                        'Corrida',
+                        'Ritmo',
+                        'Romance',
+                        'Escola',
+                        'Sci-fi',
+                        'Espaço Sideral',
+                        'Sports',
+                        'Espião',
+                        'Heróis',
+                        'Cirurgia',
+                        'Viagem Temporal',
+                        'Transporte',
+                        'UFO',
+                        'Vampiro',
+                        'Pet Virtual',
+                        'Vocabulário',
+                        'Lobisomen',
+                        'Velho Oeste',
+                        'Zumbis'
+                ];
+
+                var Estilos = [
+                        'Rogue Like',
+                        'Shooter',
+                        'Infinite Runner',
+                        'Infinite Jumper',
+                        'Tower Defense',
+                        'Survival Horror',
+                        'Hack and Slash',
+                        'Battle Royale',
+                        'Jogos de Cartas Colecionáveis'
+                ];
+
+                var Plataformas = [
+                        'Mobile',
+                        'PC'
+                ];
+
+                Plataformas.sort();
+                Temas.sort();
+                Estilos.sort();
+
+                var PlataformaAleatorio = Math.floor(Math.random() * Plataformas.length);
+                var TemaAleatorio = Math.floor(Math.random() * Temas.length);
+                var EstiloAleatorio = Math.floor(Math.random() * Estilos.length);
+
+                var Plataforma = Plataformas[PlataformaAleatorio];
+                var Tema = Temas[TemaAleatorio];
+                var Estilo = Estilos[EstiloAleatorio];
+
+                console.log(Plataforma, Tema, Estilo)
+
+                document.getElementById('tema').innerText = Tema;
+                document.getElementById('plataforma').innerText = Plataforma;
+                document.getElementById('estilo').innerText = Estilo;
+        </script>
+</body>
+
+</html>
