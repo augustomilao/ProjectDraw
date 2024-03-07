@@ -43,7 +43,11 @@ h1{
         color: dimgrey;
         font-size: 2.5em;
         margin-bottom: 1em;
-        
+        animation: Flow 2s infinite;
+}
+
+@keyframes Flow {
+        50% {font-size: 2em;}
 }
 
 
